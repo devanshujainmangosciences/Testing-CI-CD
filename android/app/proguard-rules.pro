@@ -19,3 +19,5 @@
 -keep class io.sentry.android.core.** { *; }
 -keep class io.sentry.android.fragment.** { *; }
 -keep class io.sentry.android.timber.** { *; }
+-keep class io.sentry.android.fragment.FragmentLifecycleIntegration
+-keep class io.sentry.android.timber.SentryTimberIntegration
