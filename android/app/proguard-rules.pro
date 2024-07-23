@@ -12,3 +12,5 @@
 -keep public class com.horcrux.svg.** {*;}
 
 -keep class com.mangosciences.vbc.BuildConfig { *; }
+
+-keep class io.sentry.android.fragment.FragmentLifecycleIntegration 
