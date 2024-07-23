@@ -3,7 +3,7 @@ name: Android Build
 on:
   push:
     branches:
-      - 'develop'
+      - 'develop-main'
       # - 'pre-prod'
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     name: Android Build Dev
     environment: 'dev'
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/develop-main'
 
     strategy:
       matrix:
