@@ -13,4 +13,9 @@
 
 -keep class com.mangosciences.vbc.BuildConfig { *; }
 
--dontwarn io.sentry.android.fragment.FragmentLifecycleIntegration.**
+# Keep Sentry classes
+-keep class io.sentry.** { *; }
+-keep class io.sentry.android.** { *; }
+-keep class io.sentry.android.core.** { *; }
+-keep class io.sentry.android.fragment.** { *; }
+-keep class io.sentry.android.timber.** { *; }

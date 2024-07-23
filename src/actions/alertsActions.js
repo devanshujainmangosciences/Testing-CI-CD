@@ -1,5 +1,5 @@
 /**
- * This module defines all the Redux actions.
+ * This module defines all the Redux actions
  * for alert screen
  */
 import {actionTypes} from '../constants';
