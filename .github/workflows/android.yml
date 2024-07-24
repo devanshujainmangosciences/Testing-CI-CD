@@ -58,12 +58,6 @@ jobs:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
-        with:
-          api-level: 30
-          build-tools: 30.0.3
-
       - name: Cache Gradle Dependencies
         uses: actions/cache@v4
         with:
@@ -88,6 +82,9 @@ jobs:
           alias: ${{ secrets.ANDROID_SIGNING_ALIAS }}
           keyStorePassword: ${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}
           keyPassword: ${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}
+        env:
+          # override default build-tools version (33.0.0) -- optional
+          BUILD_TOOLS_VERSION: '34.0.0'
 
       - name: Upload APK
         id: uploadArtifact
