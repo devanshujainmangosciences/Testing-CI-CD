@@ -21,3 +21,18 @@
 -keep class io.sentry.android.timber.** { *; }
 -keep class io.sentry.android.fragment.FragmentLifecycleIntegration.** { *; }
 -keep class io.sentry.android.timber.SentryTimberIntegration.** { *; }
+
+# Keep Timber classes
+-keep class timber.log.** { *; }
+
+# Keep AndroidX Fragment classes, as they might be used by Sentry
+-keep class androidx.fragment.app.Fragment { *; }
+-keep class androidx.fragment.app.FragmentManager { *; }
+-keep class androidx.fragment.app.FragmentTransaction { *; }
+
+# Keep AndroidX Lifecycle classes
+-keep class androidx.lifecycle.** { *; }
+-keep interface androidx.lifecycle.** { *; }
+
+# Keep AndroidX Activity classes
+-keep class androidx.activity.** { *; }
