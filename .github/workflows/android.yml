@@ -58,6 +58,12 @@ jobs:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+        with:
+          api-level: 30
+          build-tools: 30.0.3
+
       - name: Cache Gradle Dependencies
         uses: actions/cache@v4
         with:
